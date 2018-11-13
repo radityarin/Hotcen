@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/buttonrumahsakit"
+    android:paddingVertical="8dp"
+    >
+
+    <ImageView
+        android:id="@+id/url"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/nama_dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="DOKTER A"/>
+        <TextView
+            android:id="@+id/jadwalpraktek"
+            android:layout_below="@id/nama_dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="13.00 - 19.00"/>
+
+    </RelativeLayout>
+</LinearLayout>
