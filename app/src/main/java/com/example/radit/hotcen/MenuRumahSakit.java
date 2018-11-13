@@ -29,9 +29,8 @@ public class MenuRumahSakit extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.mapsbutton:
-                    MapsFragment mapsFragment = new MapsFragment();
-                    fragmentTransaction.replace(R.id.main_frame,mapsFragment,"Maps Fragment");
-                    fragmentTransaction.commit();
+                    Intent intent2 = new Intent(MenuRumahSakit.this,MapsLokasiRumahSakit.class);
+                    startActivity(intent2);
                     return true;
             }
             return false;
