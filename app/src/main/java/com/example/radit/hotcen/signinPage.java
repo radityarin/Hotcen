@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class signinPage extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth logIn;
+    private Button regis;
 
     @Override
     public void onStart() {
@@ -41,14 +42,18 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_signin_page);
         logIn = FirebaseAuth.getInstance();
 
-        mytv = findViewById(R.id.TextView);
-        myfont = Typeface.createFromAsset(this.getAssets(), "fonts/MerriweatherSans-Regular.ttf");
-        mytv.setTypeface(myfont);
-
-        Button tombolLogin = (Button) findViewById(R.id.regis);
+        Button tombolLogin = (Button) findViewById(R.id.login);
 
         tombolLogin.setOnClickListener(this);
 
+        regis = findViewById(R.id.regis);
+        regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signinPage.this,registerPage.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
