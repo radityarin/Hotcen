@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder> {
@@ -32,6 +34,7 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull KlinikAdapter.ViewHolder holder, int position) {
         holder.tv_namaklinik.setText(listklinik.get(position).getNamaPoli());
+        Picasso.get().load(listklinik.get(position).getUrl()).into(holder.iv_url);
         holder.iv_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
