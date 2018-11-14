@@ -11,11 +11,11 @@
         android:id="@+id/TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIGN IN"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:textSize="50dp"
+        android:text="SIGN IN"
         android:textColor="@color/colorAccent"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="50sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
