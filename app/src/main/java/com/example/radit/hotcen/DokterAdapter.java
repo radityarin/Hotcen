@@ -3,6 +3,7 @@ package com.example.radit.hotcen;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ public class DokterAdapter extends RecyclerView.Adapter<DokterAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv_url;
         private TextView tv_namadokter,tv_jadwalpraktek;
-        private LinearLayout card;
+        private CardView card;
         public ViewHolder(View itemView) {
             super(itemView);
             iv_url = (ImageView) itemView.findViewById(R.id.url);
