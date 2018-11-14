@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:layout_marginTop="30dp"
-    android:background="@drawable/buttonrumahsakit"
-    >
+    android:background="@drawable/mybutton5"
+    android:orientation="horizontal">
 
     <ImageView
-        android:layout_marginTop="30dp"
         android:id="@+id/url"
         android:layout_width="240dp"
         android:layout_height="100dp"
-        android:src="@drawable/images"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/images" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/nama_rumahsakit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RS UB MALANG"
-            android:textColor="@android:color/white"/>
+            android:text="RS UB MALANG" />
+
         <TextView
             android:id="@+id/alamat_rumahsakit"
-            android:layout_below="@id/nama_rumahsakit"
             android:layout_width="match_parent"
-            android:textColor="@android:color/white"
             android:layout_height="wrap_content"
-            android:text="Jl. Soekarno Hatta blablablabla"/>
+            android:layout_below="@id/nama_rumahsakit"
+            android:text="Jl. Soekarno Hatta blablablabla" />
+
         <TextView
             android:id="@+id/nomortelepon_rumahsakit"
-            android:layout_below="@id/alamat_rumahsakit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0813123123123"
-            android:textColor="@android:color/white"/>
+            android:layout_below="@id/alamat_rumahsakit"
+            android:text="0813123123123" />
     </LinearLayout>
 </LinearLayout>

@@ -1,5 +1,8 @@
 package com.example.radit.hotcen;
 
+import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,16 +23,19 @@ public class MainActivity extends AppCompatActivity {
                         HomeFragment homeFragment = new HomeFragment();
                         fragmentTransaction.replace(R.id.main_frame,homeFragment,"Home Fragment");
                         fragmentTransaction.commit();
+                        setTitle("Home");
                         return true;
                     case R.id.historybutton:
                         HistoryFragment historyFragment = new HistoryFragment();
                         fragmentTransaction.replace(R.id.main_frame,historyFragment,"History Fragment");
                         fragmentTransaction.commit();
+                        setTitle("History");
                         return true;
                     case R.id.profilebutton:
                         ProfileFragment profileFragment = new ProfileFragment();
                         fragmentTransaction.replace(R.id.main_frame,profileFragment,"Profile Fragment");
                         fragmentTransaction.commit();
+                        setTitle("Profile");
                         return true;
                 }
                 return false;
@@ -49,6 +55,6 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment = new HomeFragment();
         fragmentTransaction.replace(R.id.main_frame,homeFragment,"Home Fragment");
         fragmentTransaction.commit();
-
+        setTitle("Home");
     }
 }

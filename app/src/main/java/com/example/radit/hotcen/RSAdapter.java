@@ -48,7 +48,6 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-
         return listrumahsakit.size();
     }
 
