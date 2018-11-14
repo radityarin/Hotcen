@@ -34,8 +34,6 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = Register.getCurrentUser();
 
-
-
     }
 
 
