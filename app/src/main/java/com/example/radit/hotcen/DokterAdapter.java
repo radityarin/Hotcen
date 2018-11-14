@@ -59,7 +59,6 @@ public class DokterAdapter extends RecyclerView.Adapter<DokterAdapter.ViewHolder
                 public void onClick(View v) {
                     Intent intent = new Intent(context,AntrianPage.class);
                     context.startActivity(intent);
-//                    card.setBackgroundResource(R.color.colorAccent);
                 }
             });
         }

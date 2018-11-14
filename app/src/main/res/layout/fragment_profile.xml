@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name: "
+                android:text="Nama: "
                 android:layout_marginTop="8dp"
                 android:textSize="13sp"/>
 
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Phone's number: "
+                android:text="No HP: "
                 android:layout_marginTop="8dp"
                 android:textSize="13sp"/>
 
@@ -102,7 +102,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Card Identity: "
+                android:text="No KTP: "
                 android:layout_marginTop="8dp"
                 android:textSize="13sp"/>
 
@@ -114,27 +114,6 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:id="@+id/tvcardUser"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1sp"
-                android:background="@android:color/darker_gray"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Card identity's number: "
-                android:layout_marginTop="8dp"
-                android:textSize="13sp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="None"
-                android:layout_marginTop="8dp"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:id="@+id/tvCardNumbUser"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -164,6 +143,14 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/logout"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOG OUT"
+            android:textColor="@android:color/white"
+            android:background="@drawable/mybutton"/>
     </LinearLayout>
 
 
