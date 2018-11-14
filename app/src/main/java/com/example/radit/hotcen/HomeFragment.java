@@ -41,7 +41,6 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(new RSAdapter(listrumahsakit,getActivity().getApplicationContext()));
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-
         return view;
     }
 

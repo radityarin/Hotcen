@@ -77,6 +77,20 @@
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray" />
 
+        <EditText
+            android:id="@+id/nohp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/passwordregister"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:ems="10"
+            android:hint="Nomor HP"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+
         <Button
             android:id="@+id/regis"
             android:layout_width="match_parent"

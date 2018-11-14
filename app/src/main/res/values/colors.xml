@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#b84d4d</color>
-    <color name="colorPrimaryDark">#783030</color>
+    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimaryDark">#0d47a1</color>
     <color name="colorAccent">#ffffff</color>
     <color name="Transparent">#00000000</color>
     <color name="colorLogo">#0085B8</color>
     <color name="colorLogoDark">#01579b</color>
+    <color name="backgroundAzure">#F3F5F5</color>
 </resources>

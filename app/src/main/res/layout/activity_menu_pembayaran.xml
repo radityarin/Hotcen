@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     tools:context=".menuPembayaran">
 
     <LinearLayout
@@ -23,7 +22,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:text="Pembayaran"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="50dp" />
 
         <Button
@@ -33,7 +32,7 @@
             android:layout_below="@id/judul"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/mybutton5"
+            android:background="@drawable/mybutton"
             android:text="TUNAI"
             android:textColor="@android:color/white"
             android:textSize="50dp" />
@@ -45,7 +44,7 @@
             android:layout_below="@id/tunai"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/mybutton5"
+            android:background="@drawable/mybutton"
             android:text="NON TUNAI"
             android:textColor="@android:color/white"
             android:textSize="50dp" />
