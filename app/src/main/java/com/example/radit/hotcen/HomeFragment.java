@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit F","Jl MT Haryono5","023112323"));
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(new RSAdapter(listrumahsakit,getActivity().getApplicationContext()));
+        recyclerView.setAdapter(new RSAdapter(listrumahsakit,getContext()));
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         return view;

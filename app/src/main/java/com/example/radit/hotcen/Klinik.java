@@ -1,17 +1,27 @@
 package com.example.radit.hotcen;
 
 public class Klinik{
-    private String nama, url;
 
-        public Klinik(String nama) {
-            this.nama = nama;
-        }
+    private String NamaPoli, url;
 
-        public String getNama() {
-            return nama;
-        }
+    public Klinik() {
 
-        public void setNama(String nama) {
-            this.nama = nama;
-        }
+    }
+
+    public String getNamaPoli() {
+        return NamaPoli;
+    }
+
+    public void setNamaPoli(String namaPoli) {
+        NamaPoli = namaPoli;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 }

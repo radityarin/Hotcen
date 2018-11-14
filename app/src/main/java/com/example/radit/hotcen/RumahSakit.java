@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class RumahSakit {
     private String url,nama,alamat,nohp;
 
+
     public RumahSakit(String url, String nama, String alamat, String nohp) {
         this.url = url;
         this.nama = nama;
