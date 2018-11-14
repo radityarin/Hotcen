@@ -1,6 +1,7 @@
 package com.example.radit.hotcen;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -8,6 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -30,6 +34,8 @@ public class MenuRumahSakitFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_menu_rumah_sakit, container, false);
 
+
+
         ArrayList<Klinik> listklinik = new ArrayList<>();
         listklinik.add(new Klinik("Mata"));
         listklinik.add(new Klinik("THT"));
@@ -41,7 +47,9 @@ public class MenuRumahSakitFragment extends Fragment {
         recyclerView.setAdapter(new KlinikAdapter(listklinik,getActivity().getApplicationContext()));
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
 
+
         return view;
     }
+
 
 }

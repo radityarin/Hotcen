@@ -8,8 +8,18 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-public class MenuRumahSakit extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class MenuRumahSakit extends AppCompatActivity implements View.OnClickListener{
+    private FirebaseAuth menuRS;
+    private ImageView cardPoli;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -42,6 +52,10 @@ public class MenuRumahSakit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_rumah_sakit);
+//        menuRS = FirebaseAuth.getInstance();
+//        LinearLayout kartuPoli = (LinearLayout) findViewById(R.id.cardklinik);
+//        kartuPoli.setOnClickListener(this);
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
@@ -53,4 +67,13 @@ public class MenuRumahSakit extends AppCompatActivity {
 
     }
 
-}
+    @Override
+    public void onClick(View v) {
+
+        FirebaseUser user = menuRS.getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("RumahSakitA").child(user.getUid());
+//        DataPoli polidata = new DataPoli();
+
+    }
+    }

@@ -8,8 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -42,6 +48,8 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
                 Intent intent = new Intent(context,MenuRumahSakit.class);
                 intent.putExtra("judul", listrumahsakit.get(position).getNama());
                 context.startActivity(intent);
+
+
             }
         });
     }
@@ -54,12 +62,14 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv_url;
         private TextView tv_nama,tv_alamat,tv_notelepon;
+        private LinearLayout ll_cardrs;
         public ViewHolder(View itemView) {
             super(itemView);
             iv_url = (ImageView) itemView.findViewById(R.id.url);
             tv_nama = (TextView) itemView.findViewById(R.id.nama_rumahsakit);
             tv_alamat = (TextView) itemView.findViewById(R.id.alamat_rumahsakit);
             tv_notelepon = (TextView) itemView.findViewById(R.id.nomortelepon_rumahsakit);
+//            ll_cardrs = (LinearLayout) itemView.findViewById(R.id.linearlayoutcardrs);
         }
     }
 }
