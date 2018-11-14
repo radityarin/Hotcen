@@ -61,6 +61,10 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         EditText Email = (EditText) findViewById(R.id.emaillogin);
         EditText Password = (EditText) findViewById(R.id.passwordlogin);
+                        if(Email.getText().toString() == null && Password.getText().toString() == null) {
+                            Toast.makeText(signinPage.this, "GAGAL", Toast.LENGTH_SHORT).show();
+                        } else
+
 
         logIn.signInWithEmailAndPassword(Email.getText().toString(), Password.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

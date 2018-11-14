@@ -31,7 +31,7 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull KlinikAdapter.ViewHolder holder, int position) {
-        holder.tv_namaklinik.setText(listklinik.get(position).getNama());
+        holder.tv_namaklinik.setText(listklinik.get(position).getNamaPoli());
         holder.iv_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
