@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class signinPage extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth logIn;
+
     @Override
     public void onStart() {
         super.onStart();
@@ -41,7 +42,7 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
         logIn = FirebaseAuth.getInstance();
 
         mytv = findViewById(R.id.TextView);
-        myfont = Typeface.createFromAsset(this.getAssets(),"fonts/MerriweatherSans-Regular.ttf");
+        myfont = Typeface.createFromAsset(this.getAssets(), "fonts/MerriweatherSans-Regular.ttf");
         mytv.setTypeface(myfont);
 
         Button tombolLogin = (Button) findViewById(R.id.regis);
@@ -56,7 +57,7 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
         EditText Email = (EditText) findViewById(R.id.emaillogin);
         EditText Password = (EditText) findViewById(R.id.passwordlogin);
 
-        logIn.signInWithEmailAndPassword(Email.getText().toString(),Password.getText().toString())
+        logIn.signInWithEmailAndPassword(Email.getText().toString(), Password.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -69,12 +70,9 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(signinPage.this, "GAGAL", Toast.LENGTH_SHORT).show();
-
                         }
-
                         // ...
                     }
                 });
-
     }
 }

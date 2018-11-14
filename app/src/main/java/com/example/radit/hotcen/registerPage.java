@@ -52,8 +52,8 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         mytv.setTypeface(myfont);
 
         //tombol signup
-       Button tombolRegis  =(Button) findViewById(R.id.regis);
-       tombolRegis.setOnClickListener(this);
+        Button tombolRegis  =(Button) findViewById(R.id.regis);
+        tombolRegis.setOnClickListener(this);
 
 
     }

@@ -29,7 +29,7 @@ public class MenuRumahSakit extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.mapsbutton:
-                    Intent intent2 = new Intent(MenuRumahSakit.this,MapsLokasiRumahSakit.class);
+                    Intent intent2 = new Intent(MenuRumahSakit.this,LokasiRumahSakit.class);
                     startActivity(intent2);
                     return true;
             }

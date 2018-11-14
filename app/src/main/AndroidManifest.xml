@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.radit.hotcen">
 
     <!--
@@ -15,20 +16,23 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".splashScreen">
-            android:name=".SplashScreen"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".splashScreen"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                yhm
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".landingPage" />
+        <activity
+            android:name=".landingPage"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".signinPage" />
         <activity android:name=".registerPage" />
         <activity
@@ -57,9 +61,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".pembayaranTunai" />
         <activity
-            android:name=".MapsLokasiRumahSakit"
-            android:label="@string/title_activity_maps_lokasi_rumah_sakit"></activity>
+            android:name=".LokasiRumahSakit"
+            android:label="@string/title_activity_lokasi_rumah_sakit"></activity>
     </application>
 
 </manifest>

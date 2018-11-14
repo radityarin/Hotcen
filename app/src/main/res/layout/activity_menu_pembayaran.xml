@@ -4,33 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".menuPembayaran">
 
-    <TextView
-        android:id="@+id/judul"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pembayaran"
-        android:textSize="50dp"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_marginTop="40dp"
-        android:id="@+id/tunai"
-        android:layout_below="@id/judul"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="30dp"
-        android:layout_height="120dp"
-        android:text="TUNAI"
-        android:textSize="50dp"/>
-    <Button
-        android:layout_marginTop="40dp"
-        android:id="@+id/nontunai"
-        android:layout_below="@id/tunai"
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="30dp"
-        android:layout_height="120dp"
-        android:text="NON TUNAI"
-        android:textSize="50dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="98dp"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Pembayaran"
+            android:textColor="@android:color/white"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/tunai"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/judul"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/mybutton5"
+            android:text="TUNAI"
+            android:textColor="@android:color/white"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/nontunai"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/tunai"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/mybutton5"
+            android:text="NON TUNAI"
+            android:textColor="@android:color/white"
+            android:textSize="50dp" />
+    </LinearLayout>
 </RelativeLayout>
