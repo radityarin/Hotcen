@@ -3,30 +3,13 @@ package com.example.radit.hotcen;
 import java.util.ArrayList;
 
 public class RumahSakit {
-    private String url,nama,alamat,nohp;
+    private String alamat, nama, nohp, url;
 
-
-    public RumahSakit(String url, String nama, String alamat, String nohp) {
-        this.url = url;
-        this.nama = nama;
+    public RumahSakit(String alamat, String nama, String nohp, String url) {
         this.alamat = alamat;
-        this.nohp = nohp;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public void setNama(String nama) {
         this.nama = nama;
+        this.nohp = nohp;
+        this.url = url;
     }
 
     public String getAlamat() {
@@ -37,11 +20,27 @@ public class RumahSakit {
         this.alamat = alamat;
     }
 
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
     public String getNohp() {
         return nohp;
     }
 
     public void setNohp(String nohp) {
         this.nohp = nohp;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
