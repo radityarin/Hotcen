@@ -1,5 +1,7 @@
 package com.example.radit.hotcen;
 
+import android.app.DatePickerDialog;
+import android.support.v4.app.DialogFragment;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -7,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +22,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class registerPage extends AppCompatActivity implements View.OnClickListener {
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class registerPage extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     private FirebaseAuth Register;
 
@@ -53,6 +60,14 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         Button tombolRegis  =(Button) findViewById(R.id.regis);
         tombolRegis.setOnClickListener(this);
 
+        Button btntgllhr = (Button) findViewById(R.id.buttontanggallahir);
+        btntgllhr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getSupportFragmentManager(),"date picker ");
+            }
+        });
 
     }
 
@@ -89,5 +104,17 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
                     }
 
                 });
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
+
+        Button button = (Button) findViewById(R.id.buttontanggallahir);
+        button.setText(currentDateString);
     }
 }

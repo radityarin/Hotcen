@@ -50,7 +50,7 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
         regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signinPage.this,registerPage.class);
+                Intent intent = new Intent(signinPage.this, registerPage.class);
                 startActivity(intent);
             }
         });
@@ -61,27 +61,28 @@ public class signinPage extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         EditText Email = (EditText) findViewById(R.id.emaillogin);
         EditText Password = (EditText) findViewById(R.id.passwordlogin);
-                        if(Email.getText().toString() == null && Password.getText().toString() == null) {
-                            Toast.makeText(signinPage.this, "GAGAL", Toast.LENGTH_SHORT).show();
-                        } else
-
-
-        logIn.signInWithEmailAndPassword(Email.getText().toString(), Password.getText().toString())
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = logIn.getCurrentUser();
-                            Toast.makeText(signinPage.this, "BERHASIL", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(signinPage.this, MainActivity.class);
-                            startActivity(i);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(signinPage.this, "GAGAL", Toast.LENGTH_SHORT).show();
+        String email = Email.getText().toString();
+        String password = Password.getText().toString();
+        if (email.equals("")&&password.equals("")) {
+            Toast.makeText(signinPage.this, "SILAHKAN LENGKAPI TERLEBIH DAHULU", Toast.LENGTH_SHORT).show();
+        } else {
+            logIn.signInWithEmailAndPassword(Email.getText().toString(), Password.getText().toString())
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                FirebaseUser user = logIn.getCurrentUser();
+                                Toast.makeText(signinPage.this, "BERHASIL", Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(signinPage.this, MainActivity.class);
+                                startActivity(i);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(signinPage.this, "GAGAL", Toast.LENGTH_SHORT).show();
+                            }
+                            // ...
                         }
-                        // ...
-                    }
-                });
+                    });
+        }
     }
 }
