@@ -17,8 +17,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="40dp"
-            android:text="RUMAH SAKIT A"
-            />
+            android:text="RUMAH SAKIT A"/>
 
         <ImageView
             android:id="@+id/foto_rumahsakit"
@@ -30,7 +29,8 @@
             android:layout_marginTop="16dp"
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </FrameLayout>

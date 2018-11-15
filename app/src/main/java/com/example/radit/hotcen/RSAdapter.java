@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
@@ -37,15 +39,15 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
         holder.tv_nama.setText(listrumahsakit.get(position).getNama());
         holder.tv_alamat.setText(listrumahsakit.get(position).getAlamat());
         holder.tv_notelepon.setText(listrumahsakit.get(position).getNohp());
+        Picasso.get().load(listrumahsakit.get(position).getUrl()).into(holder.iv_url);
 
-        holder.iv_url.setOnClickListener(new View.OnClickListener() {
+        holder.ll_cardrs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,MenuRumahSakit.class);
                 intent.putExtra("judul", listrumahsakit.get(position).getNama());
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
-
-
             }
         });
     }
@@ -66,7 +68,6 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
             tv_nama = (TextView) itemView.findViewById(R.id.nama_rumahsakit);
             tv_alamat = (TextView) itemView.findViewById(R.id.alamat_rumahsakit);
             tv_notelepon = (TextView) itemView.findViewById(R.id.nomortelepon_rumahsakit);
-
             ll_cardrs = (CardView) itemView.findViewById(R.id.linearlayoutcardrs);
         }
     }

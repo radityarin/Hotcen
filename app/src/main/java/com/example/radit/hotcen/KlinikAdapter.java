@@ -3,6 +3,7 @@ package com.example.radit.hotcen;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,7 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
     public void onBindViewHolder(@NonNull KlinikAdapter.ViewHolder holder, int position) {
         holder.tv_namaklinik.setText(listklinik.get(position).getNamaPoli());
         Picasso.get().load(listklinik.get(position).getUrl()).into(holder.iv_url);
-        holder.iv_url.setOnClickListener(new View.OnClickListener() {
+        holder.cv_klinik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,jadwalDokter.class);
@@ -53,10 +54,12 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv_url;
         private TextView tv_namaklinik;
+        private CardView cv_klinik;
         public ViewHolder(View itemView) {
             super(itemView);
             iv_url = (ImageView) itemView.findViewById(R.id.url);
             tv_namaklinik = (TextView) itemView.findViewById(R.id.nama_klinik);
+            cv_klinik = (CardView) itemView.findViewById(R.id.cardklinik);
         }
     }
 }
