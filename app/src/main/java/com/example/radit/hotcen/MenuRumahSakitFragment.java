@@ -46,7 +46,7 @@ public class MenuRumahSakitFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_menu_rumah_sakit, container, false);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("RumahSakitA");
+        DatabaseReference myRef = database.getReference("Rumah Sakit Universitas Brawijaya");
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

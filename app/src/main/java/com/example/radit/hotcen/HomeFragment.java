@@ -30,15 +30,15 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         ArrayList<RumahSakit> listrumahsakit = new ArrayList<>();
-        listrumahsakit.add(new RumahSakit("dssdsd","Rumah Sakit A","Jl Soekarno Hatta","081321323"));
-        listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit B","Jl MT Haryono","023112323"));
-        listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit C","Jl MT Haryono2","023112323"));
-        listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit D","Jl MT Haryono3","023112323"));
-        listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit E","Jl MT Haryono4","023112323"));
-        listrumahsakit.add(new RumahSakit("dasdd","Rumah Sakit F","Jl MT Haryono5","023112323"));
+        listrumahsakit.add(new RumahSakit("dssdsd", "Rumah Sakit A", "Jl Soekarno Hatta", "081321323"));
+        listrumahsakit.add(new RumahSakit("dasdd", "Rumah Sakit B", "Jl MT Haryono", "023112323"));
+        listrumahsakit.add(new RumahSakit("dasdd", "Rumah Sakit C", "Jl MT Haryono2", "023112323"));
+        listrumahsakit.add(new RumahSakit("dasdd", "Rumah Sakit D", "Jl MT Haryono3", "023112323"));
+        listrumahsakit.add(new RumahSakit("dasdd", "Rumah Sakit E", "Jl MT Haryono4", "023112323"));
+        listrumahsakit.add(new RumahSakit("dasdd", "Rumah Sakit F", "Jl MT Haryono5", "023112323"));
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(new RSAdapter(listrumahsakit,getContext()));
+        recyclerView.setAdapter(new RSAdapter(listrumahsakit, getContext()));
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         return view;

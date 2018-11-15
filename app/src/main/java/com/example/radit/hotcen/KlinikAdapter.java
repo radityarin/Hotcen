@@ -39,6 +39,7 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,jadwalDokter.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
