@@ -6,7 +6,6 @@ public class RumahSakit {
     private String alamat, nama, nohp, url;
 
     public RumahSakit() {
-
     }
 
     public RumahSakit(String alamat, String nama, String nohp, String url) {
