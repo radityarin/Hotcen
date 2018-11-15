@@ -14,7 +14,7 @@
 
     <style name="MeterNumberPickerStyle">
         <item name="mnp_min">0</item>
-        <item name="mnp_max">2</item>
+        <item name="mnp_max">9</item>
         <item name="mnp_textColor">@color/colorPrimary</item>
         <item name="mnp_textSize">50sp</item>
         <item name="mnp_paddingHorizontal">5dp</item>
@@ -23,8 +23,8 @@
 
     <style name="MeterViewStyle">
         <item name="mv_firstColor">@android:color/white</item>
-        <!--<item name="mv_numberOfFirst">5</item>-->
-        <!--<item name="mv_numberOfSecond">1</item>-->
+        <item name="mv_numberOfFirst">5</item>
+        <item name="mv_numberOfSecond">0</item>
         <item name="mv_pickerStyle">@style/MeterNumberPickerStyle</item>
         <item name="mv_secondColor">@android:color/white</item>
     </style>

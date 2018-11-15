@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MenuRumahSakit extends AppCompatActivity implements View.OnClickListener{
+public class MenuRumahSakit extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth menuRS;
     private ImageView cardPoli;
 
@@ -30,7 +30,7 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
             switch (item.getItemId()) {
                 case R.id.orderbutton:
                     MenuRumahSakitFragment menuRumahSakitFragment = new MenuRumahSakitFragment();
-                    fragmentTransaction.replace(R.id.main_frame,menuRumahSakitFragment,"Home Fragment");
+                    fragmentTransaction.replace(R.id.main_frame, menuRumahSakitFragment, "Home Fragment");
                     fragmentTransaction.commit();
                     return true;
                 case R.id.callbutton:
@@ -39,7 +39,7 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
                     startActivity(intent);
                     return true;
                 case R.id.mapsbutton:
-                    Intent intent2 = new Intent(MenuRumahSakit.this,LokasiRumahSakit.class);
+                    Intent intent2 = new Intent(MenuRumahSakit.this, LokasiRumahSakit.class);
                     startActivity(intent2);
                     return true;
             }
@@ -61,8 +61,8 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        MenuRumahSakitFragment menuRumahSakitFragment= new MenuRumahSakitFragment();
-        fragmentTransaction.replace(R.id.main_frame,menuRumahSakitFragment,"Home Fragment");
+        MenuRumahSakitFragment menuRumahSakitFragment = new MenuRumahSakitFragment();
+        fragmentTransaction.replace(R.id.main_frame, menuRumahSakitFragment, "Home Fragment");
         fragmentTransaction.commit();
 
     }
@@ -76,4 +76,4 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
 //        DataPoli polidata = new DataPoli();
 
     }
-    }
+}

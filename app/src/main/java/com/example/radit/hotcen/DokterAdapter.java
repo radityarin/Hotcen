@@ -59,6 +59,7 @@ public class DokterAdapter extends RecyclerView.Adapter<DokterAdapter.ViewHolder
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context,AntrianPage.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
             });

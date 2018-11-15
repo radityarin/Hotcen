@@ -56,13 +56,11 @@ public class HomeFragment extends Fragment {
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             }
-
             @Override
             public void onCancelled(DatabaseError error) {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
 
         return view;
     }

@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".pembayaranTunai">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/perintah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Silahkan menuju\nloket pembayaran"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/qrcode"
+            android:layout_below="@id/perintah"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qrcode"/>
+
+        <TextView
+            android:layout_below="@id/qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NO REF : IJADSKJNADS99QNASD"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
 </RelativeLayout>

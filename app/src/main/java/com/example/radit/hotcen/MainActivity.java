@@ -13,34 +13,34 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
 
-        private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+    private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
-                switch (item.getItemId()) {
-                    case R.id.homebutton:
-                        HomeFragment homeFragment = new HomeFragment();
-                        fragmentTransaction.replace(R.id.main_frame,homeFragment,"Home Fragment");
-                        fragmentTransaction.commit();
-                        setTitle("Home");
-                        return true;
-                    case R.id.historybutton:
-                        HistoryFragment historyFragment = new HistoryFragment();
-                        fragmentTransaction.replace(R.id.main_frame,historyFragment,"History Fragment");
-                        fragmentTransaction.commit();
-                        setTitle("History");
-                        return true;
-                    case R.id.profilebutton:
-                        ProfileFragment profileFragment = new ProfileFragment();
-                        fragmentTransaction.replace(R.id.main_frame,profileFragment,"Profile Fragment");
-                        fragmentTransaction.commit();
-                        setTitle("Profile");
-                        return true;
-                }
-                return false;
+            switch (item.getItemId()) {
+                case R.id.homebutton:
+                    HomeFragment homeFragment = new HomeFragment();
+                    fragmentTransaction.replace(R.id.main_frame, homeFragment, "Home Fragment");
+                    fragmentTransaction.commit();
+                    setTitle("Home");
+                    return true;
+                case R.id.historybutton:
+                    HistoryFragment historyFragment = new HistoryFragment();
+                    fragmentTransaction.replace(R.id.main_frame, historyFragment, "History Fragment");
+                    fragmentTransaction.commit();
+                    setTitle("History");
+                    return true;
+                case R.id.profilebutton:
+                    ProfileFragment profileFragment = new ProfileFragment();
+                    fragmentTransaction.replace(R.id.main_frame, profileFragment, "Profile Fragment");
+                    fragmentTransaction.commit();
+                    setTitle("Profile");
+                    return true;
             }
-        };
+            return false;
+        }
+    };
 
 
     @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         HomeFragment homeFragment = new HomeFragment();
-        fragmentTransaction.replace(R.id.main_frame,homeFragment,"Home Fragment");
+        fragmentTransaction.replace(R.id.main_frame, homeFragment, "Home Fragment");
         fragmentTransaction.commit();
         setTitle("Home");
     }
