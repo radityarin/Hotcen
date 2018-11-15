@@ -46,6 +46,9 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(context,MenuRumahSakit.class);
                 intent.putExtra("judul", listrumahsakit.get(position).getNama());
+                intent.putExtra("alamat", listrumahsakit.get(position).getAlamat());
+                intent.putExtra("gambar",listrumahsakit.get(position).getUrl());
+                intent.putExtra("notelpon",listrumahsakit.get(position).getNohp());
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -60,7 +63,6 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView iv_url;
         private TextView tv_nama,tv_alamat,tv_notelepon;
-
         private CardView ll_cardrs;
         public ViewHolder(View itemView) {
             super(itemView);

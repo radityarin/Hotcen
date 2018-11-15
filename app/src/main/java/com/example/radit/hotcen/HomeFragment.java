@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 }
 
                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-                recyclerView.setAdapter(new RSAdapter(listrumahsakit, getActivity().getApplicationContext()));
+                recyclerView.setAdapter(new RSAdapter(listrumahsakit, getContext()));
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             }

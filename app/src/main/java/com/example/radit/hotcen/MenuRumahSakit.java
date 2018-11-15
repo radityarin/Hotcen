@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -35,7 +36,8 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
                     return true;
                 case R.id.callbutton:
                     Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:0123456789"));
+                    String notelepon = getIntent().getStringExtra("notelpon");
+                    intent.setData(Uri.parse("tel:"+notelepon));
                     startActivity(intent);
                     return true;
                 case R.id.mapsbutton:
@@ -62,9 +64,14 @@ public class MenuRumahSakit extends AppCompatActivity implements View.OnClickLis
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         MenuRumahSakitFragment menuRumahSakitFragment = new MenuRumahSakitFragment();
+        Bundle bundle = new Bundle();
+        String mJudul = getIntent().getStringExtra("judul");
+        bundle.putString("gambar", getIntent().getStringExtra("gambar"));
+        bundle.putString("judul", mJudul);
+        bundle.putString("notelpon", getIntent().getStringExtra("notelpon"));
+        menuRumahSakitFragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.main_frame, menuRumahSakitFragment, "Home Fragment");
         fragmentTransaction.commit();
-
     }
 
     @Override

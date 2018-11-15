@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,6 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -49,14 +51,14 @@ public class MenuRumahSakitFragment extends Fragment {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot dt : dataSnapshot.getChildren()){
+                for (DataSnapshot dt : dataSnapshot.getChildren()) {
                     Klinik mKlinik = dt.getValue(Klinik.class);
                     listklinik.add(mKlinik);
                 }
 
                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-                recyclerView.setAdapter(new KlinikAdapter(listklinik,getActivity().getApplicationContext()));
-                recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+                recyclerView.setAdapter(new KlinikAdapter(listklinik, getActivity().getApplicationContext()));
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
             }
 
             @Override
@@ -65,7 +67,10 @@ public class MenuRumahSakitFragment extends Fragment {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
+        TextView mNama = view.findViewById(R.id.nama_rumahsakit);
+        ImageView mUrl = view.findViewById(R.id.foto_rumahsakit);
+        mNama.setText(getArguments().getString("judul"));
+        Picasso.get().load(getArguments().getString("gambar")).into(mUrl);
         return view;
     }
 
