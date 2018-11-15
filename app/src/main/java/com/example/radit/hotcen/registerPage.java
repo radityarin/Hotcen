@@ -29,6 +29,7 @@ import java.util.Date;
 public class registerPage extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     private FirebaseAuth Register;
+    String tgllahir ="";
 
     TextView mytv;
     Typeface myfont;
@@ -77,6 +78,7 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         final EditText EmailRegis = (EditText) findViewById(R.id.emailregister);
         final EditText NoID = (EditText) findViewById(R.id.noID);
         EditText PasswordRegis = (EditText) findViewById(R.id.passwordregister);
+        final EditText nohp = (EditText) findViewById(R.id.nohp);
         Register.createUserWithEmailAndPassword(EmailRegis.getText().toString(), PasswordRegis.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -89,7 +91,7 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference myRef = database.getReference("Biodata").child(user.getUid());
 
-                            Profil profil = new Profil(Name.getText().toString(), EmailRegis.getText().toString(), NoID.getText().toString());
+                            Profil profil = new Profil(Name.getText().toString(), EmailRegis.getText().toString(), NoID.getText().toString(), nohp.getText().toString(), tgllahir );
 
                             myRef.setValue(profil);
                             Intent i = new Intent(registerPage.this, MainActivity.class);
@@ -113,7 +115,7 @@ public class registerPage extends AppCompatActivity implements View.OnClickListe
         c.set(Calendar.MONTH, month);
         c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
-
+        tgllahir=currentDateString;
         Button button = (Button) findViewById(R.id.buttontanggallahir);
         button.setText(currentDateString);
     }
