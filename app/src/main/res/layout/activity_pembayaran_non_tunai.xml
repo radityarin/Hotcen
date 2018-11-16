@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient"
     android:layout_height="match_parent"
     tools:context=".pembayaranNonTunai">
 
@@ -24,34 +25,48 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/ccpayment"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@drawable/logo_mandiri"
+            android:textSize="30dp"
+            android:text="Credit Card"
+            android:background="@drawable/mybutton3"
             android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/dcpayment"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bca"
-            android:textAllCaps="false"
-            android:textSize="40dp" />
+            android:layout_marginTop="40dp"
+            android:textSize="30dp"
+            android:text="Debit Card"
+            android:background="@drawable/mybutton3"
+            android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bri"
-            android:textAllCaps="false"
-            android:textSize="40dp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bnilogo"
-            android:textAllCaps="false"
-            android:textSize="40dp" />
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/bca"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textSize="40dp" />-->
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/bri"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textSize="40dp" />-->
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/bnilogo"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textSize="40dp" />-->
 
     </LinearLayout>
 </RelativeLayout>

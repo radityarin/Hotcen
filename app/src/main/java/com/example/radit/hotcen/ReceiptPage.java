@@ -6,20 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class pembayaranNonTunai extends AppCompatActivity {
-
-    private Button ccpayment,dcpayment;
+public class ReceiptPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pembayaran_non_tunai);
+        setContentView(R.layout.activity_receipt_page);
 
-        ccpayment = (Button) findViewById(R.id.ccpayment);
-        ccpayment.setOnClickListener(new View.OnClickListener() {
+        Button homebutton = (Button) findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(pembayaranNonTunai.this, CreditCardPaymentPage.class);
+                Intent intent = new Intent(ReceiptPage.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
