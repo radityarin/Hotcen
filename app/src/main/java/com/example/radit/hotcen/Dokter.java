@@ -1,26 +1,40 @@
 package com.example.radit.hotcen;
 
 public class Dokter {
-    private String namadokter, jadwaldokter;
+    private String Jadwal, Nama, Spesialis, Url;
 
-    public Dokter(String namadokter, String jadwaldokter) {
-        this.namadokter = namadokter;
-        this.jadwaldokter = jadwaldokter;
+    public Dokter() {
     }
 
-    public String getNamadokter() {
-        return namadokter;
+    public String getJadwal() {
+        return Jadwal;
     }
 
-    public void setNamadokter(String namadokter) {
-        this.namadokter = namadokter;
+    public void setJadwal(String jadwal) {
+        Jadwal = jadwal;
     }
 
-    public String getJadwaldokter() {
-        return jadwaldokter;
+    public String getNama() {
+        return Nama;
     }
 
-    public void setJadwaldokter(String jadwaldokter) {
-        this.jadwaldokter = jadwaldokter;
+    public void setNama(String nama) {
+        Nama = nama;
+    }
+
+    public String getSpesialis() {
+        return Spesialis;
+    }
+
+    public void setSpesialis(String spesialis) {
+        Spesialis = spesialis;
+    }
+
+    public String getUrl() {
+        return Url;
+    }
+
+    public void setUrl(String url) {
+        Url = url;
     }
 }

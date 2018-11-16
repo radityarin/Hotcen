@@ -33,13 +33,14 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull KlinikAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull KlinikAdapter.ViewHolder holder, final int position) {
         holder.tv_namaklinik.setText(listklinik.get(position).getNamaPoli());
         Picasso.get().load(listklinik.get(position).getUrl()).into(holder.iv_url);
         holder.cv_klinik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,jadwalDokter.class);
+                intent.putExtra("namaklinik",listklinik.get(position).getNamaPoli());
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
