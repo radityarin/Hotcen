@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"></android.support.v7.widget.RecyclerView>
+            android:layout_marginRight="16dp">
+        </android.support.v7.widget.RecyclerView>
 
 
         <Button
@@ -37,39 +38,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/nohp"
+            android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/mybutton"
             android:text="Pilih Tanggal"
             android:textAlignment="center"
-            android:layout_marginHorizontal="30dp"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="15dp" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Nama Dokter"-->
-                <!--android:textSize="20dp" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/namadokter"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:textColor="@android:color/black"-->
-                <!--android:textSize="30dp"-->
-                <!--android:textStyle="bold" />-->
-        <!--</LinearLayout>-->
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <Button
                 android:id="@+id/konfirmasi"
                 android:layout_width="match_parent"

@@ -48,7 +48,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".jadwalDokter"
-            android:parentActivityName=".MenuRumahSakit" />
+            android:parentActivityName=".MenuRumahSakit"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity android:name=".AntrianPage" />
         <activity android:name=".menuPembayaran" />
         <activity android:name=".pembayaranNonTunai" />
@@ -71,7 +72,8 @@
             android:label="@string/title_activity_lokasi_rumah_sakit" />
         <activity android:name=".DetailPage" />
         <activity android:name=".CreditCardPaymentPage" />
-        <activity android:name=".ReceiptPage"></activity>
+        <activity android:name=".ReceiptPage" />
+        <activity android:name=".AntriObatPage"></activity>
     </application>
 
 </manifest>

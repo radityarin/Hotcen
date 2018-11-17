@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                     setTitle("Home");
                     return true;
+                case R.id.orderbutton:
+                    OrderFragment orderFragment = new OrderFragment();
+                    fragmentTransaction.replace(R.id.main_frame, orderFragment, "Order Fragment");
+                    fragmentTransaction.commit();
+                    setTitle("Order");
+                    return true;
                 case R.id.historybutton:
                     HistoryFragment historyFragment = new HistoryFragment();
                     fragmentTransaction.replace(R.id.main_frame, historyFragment, "History Fragment");

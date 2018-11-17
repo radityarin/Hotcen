@@ -8,6 +8,13 @@
         android:icon="@drawable/ic_action_home"
         android:title="Home"
         app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/orderbutton"
+        android:enabled="true"
+        android:icon="@drawable/ic_reorder_black_24dp"
+        android:title="Order"
+        app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/historybutton"
         android:enabled="true"

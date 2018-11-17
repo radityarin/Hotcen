@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,9 +59,6 @@ public class jadwalDokter extends AppCompatActivity implements DatePickerDialog.
                 recyclerView.setAdapter(new DokterAdapter(listdokter, getApplicationContext()));
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-//
-//                detailpesanan_namadokter = (TextView) findViewById(R.id.namadokter);
-//                detailpesanan_namadokter.setText(getIntent().getStringExtra("namadokter"));
             }
 
             @Override
@@ -83,7 +81,8 @@ public class jadwalDokter extends AppCompatActivity implements DatePickerDialog.
         daftar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(jadwalDokter.this,AntrianPage.class);
+                Intent intent = new Intent(jadwalDokter.this,MainActivity.class);
+                Toast.makeText(jadwalDokter.this, "REGISTRASI BERHASIL, SILAHKAN CEK MENU ORDER", Toast.LENGTH_SHORT).show();
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
