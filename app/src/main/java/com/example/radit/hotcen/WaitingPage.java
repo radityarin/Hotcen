@@ -1,16 +1,14 @@
 package com.example.radit.hotcen;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.alexzaitsev.meternumberpicker.MeterView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,30 +17,17 @@ import com.google.firebase.database.ValueEventListener;
 
 import static android.content.ContentValues.TAG;
 
-public class AntrianPage extends AppCompatActivity {
+public class WaitingPage extends AppCompatActivity {
 
-    private Button bayar;
     private TextView noantriansaatini;
-    private TextView nomorantrianpasien;
-    int i = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_antrian_page);
-
-        bayar = findViewById(R.id.bayar);
-        bayar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AntrianPage.this,WaitingPage.class);
-                startActivity(intent);
-            }
-        });
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        setContentView(R.layout.activity_waiting_page);
 
         noantriansaatini = (TextView) findViewById(R.id.nomorantriansaatini);
-        nomorantrianpasien = (TextView) findViewById(R.id.noantrian);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("NoAntrian");
@@ -60,10 +45,13 @@ public class AntrianPage extends AppCompatActivity {
             }
         });
 
-        if(noantriansaatini.getText().equals(nomorantrianpasien.getText())){
-            Intent intent =  new Intent (AntrianPage.this,menuPembayaran.class);
-            startActivity(intent);
-        }
-
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(getApplicationContext(), menuPembayaran.class));
+                finish();
+            }
+        }, 5000L);
     }
 }

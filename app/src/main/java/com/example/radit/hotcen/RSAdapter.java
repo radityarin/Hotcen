@@ -40,7 +40,6 @@ public class RSAdapter extends RecyclerView.Adapter<RSAdapter.ViewHolder> {
         holder.tv_alamat.setText(listrumahsakit.get(position).getAlamat());
         holder.tv_notelepon.setText(listrumahsakit.get(position).getNohp());
         Picasso.get().load(listrumahsakit.get(position).getUrl()).into(holder.iv_url);
-
         holder.ll_cardrs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

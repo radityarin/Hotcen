@@ -12,7 +12,6 @@ public class splashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-//        getActionBar().getCustomView();
         setContentView(R.layout.activity_splash_screen);
 
         final Handler handler = new Handler();

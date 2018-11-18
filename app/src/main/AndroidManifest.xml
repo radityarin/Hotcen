@@ -73,7 +73,8 @@
         <activity android:name=".DetailPage" />
         <activity android:name=".CreditCardPaymentPage" />
         <activity android:name=".ReceiptPage" />
-        <activity android:name=".AntriObatPage"></activity>
+        <activity android:name=".AntriObatPage" />
+        <activity android:name=".WaitingPage"></activity>
     </application>
 
 </manifest>
